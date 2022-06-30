@@ -15,23 +15,30 @@ public class Employee {
         return employee_id;
     }
 
+    @Column(name = "name")
+    private String name;
+
+
+    @Column(name = "salary")
+    private Float salary;
+
+    @Column(name = "age")
+    private int age;
+
+
     public void setEmployee_id(int employee_id) {
         this.employee_id = employee_id;
     }
 
-    @Column(name = "salary")
-    private float salary;
 
-    public float getSalary() {
+    public Float getSalary() {
         return salary;
     }
 
-    public void setSalary(float salary) {
+    public void setSalary(Float salary) {
         this.salary = salary;
     }
 
-    @Column(name = "age")
-    private int age;
 
     public int getAge() {
         return age;
@@ -40,9 +47,6 @@ public class Employee {
     public void setAge(int age) {
         this.age = age;
     }
-
-    @Column(name = "name")
-    private String name;
 
     public String getName() {
         return name;
@@ -57,7 +61,7 @@ public class Employee {
         super();
     }
 
-    public Employee(int employee_id, float salary, int age, String name) {
+    public Employee(int employee_id, Float salary, int age, String name) {
         this.employee_id = employee_id;
         this.salary = salary;
         this.age = age;
